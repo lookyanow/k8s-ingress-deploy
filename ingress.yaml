@@ -14,5 +14,5 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: my-nginx2
+          serviceName: go-server
           servicePort: 80

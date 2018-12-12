@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-server
+spec:
+  selector:
+    matchLabels:
+      run: go-server
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: go-server
+    spec:
+      containers:
+      - name: go-server
+        image: lookyanow/goserver:v1.2
+        ports:
+        - containerPort: 80
+
